@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="home">
+  <a class="rss-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">通过 RSS 订阅</a>
+  <h1 class="page-heading">文章列表</h1>
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">前一页</a>
+  {% else %}
+    <span class="previous">前一页</span>
+  {% endif %}
+  <span class="page_number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">后一页</a>
+  {% else %}
+    <span class="next ">后一页</span>
+  {% endif %}
+</div>
+
+</div>

@@ -1,0 +1,26 @@
+# Site settings
+title: laobubu的博客
+email: laobubu@gmail.com
+timezone: Asia/Chongqing
+description: > # this means to ignore newlines until "baseurl:"
+  大概就是一个乱七八糟的地方而已。
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://note.laobubu.net" # the base hostname & protocol for your site
+twitter_username: laobubu
+github_username:  laobubu
+
+permalink: /archivers/:title
+
+# Build settings
+paginate: 5
+paginate_path: "page:num"
+
+highlighter: true
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - fenced_code_blocks
