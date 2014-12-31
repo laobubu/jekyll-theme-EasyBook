@@ -1,0 +1,18 @@
+.page-content .wrapper {
+    .post-toc {
+        font-size: $small-font-size;
+        background: lighten($background-color,10%);
+        border: 1px solid darken($background-color, 10%);
+        padding: 10px;
+        margin-right: auto;
+        margin-bottom: 20px;
+        width: 80%;
+        display: none;
+        
+        &:before {
+            content: 'TOC';
+            display: block;
+            font-weight: bold;
+        }
+    }
+}
