@@ -15,8 +15,7 @@ function TOC(toc,content) {
         var hash = 'generated-hash-' + (cnt++);
         q.text(h.text());
         q.attr('href', '#' + hash );
-        q.click(function(){ b.animate({scrollTop: (h.offset().top) + 'px'},200);});
-        h.append($('<a name="' + hash + '"></a>'));
+        q.click(function(e){ b.animate({scrollTop: (h.offset().top) + 'px'},200);e.preventDefault()});
         return q;
     };
     
