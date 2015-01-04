@@ -1,6 +1,9 @@
 # Site settings
 title: laobubu的博客
 email: laobubu@gmail.com
+author: laobubu
+profile: > # until "timezone:"
+  A blogging guy.
 timezone: Asia/Chongqing
 description: > # this means to ignore newlines until "baseurl:"
   大概就是一个乱七八糟的地方而已。

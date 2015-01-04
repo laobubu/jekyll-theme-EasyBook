@@ -1,0 +1,37 @@
+.post {
+    .post-header {
+    	margin: 0 100px;
+    	margin-bottom: 40px;
+    	padding: 20px;
+    	border-bottom: 1px solid #CCC;
+        .post-title {
+        	font-size:40px;
+        	font-weight: normal;
+        	margin: 0 -100px;
+        	@include media-query($on-palm) {
+        		font-size: 34px;
+        	}
+        }
+        .post-meta {
+        	color:#999;
+        	font-size:$small-font-size;
+        	margin: 0 -100px;
+        }
+        @include media-query($on-palm) {
+    		text-align:center;
+    		margin-bottom: 10px;
+    		padding: 10px;
+        }
+    }
+    .post-content {	
+        pre {
+        	margin: 0 -30px;
+            @include media-query($on-palm) {
+		        margin: 0 -10px;
+            }
+        }
+    }
+    .post-comments {
+        padding-top: 30px;
+    }
+}
