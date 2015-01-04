@@ -180,3 +180,14 @@
 		padding: 10px;
 	}
 }
+
+//Holy Grail Fix
+@media (min-width: 1121px) {
+	.col-main, .col-second {
+		padding-bottom:60000px;
+		margin-bottom:-60000px;
+	}
+	.page-content .wrapper {
+		overflow:hidden;
+	}
+}
