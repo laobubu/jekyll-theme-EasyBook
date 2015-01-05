@@ -39,16 +39,21 @@
 .page-content {
 	background:#e0e0e3;
 	padding: 30px 0;
-}
-.page-content .wrapper:after {
-	clear:both;
-	content: '';
-	display:block;
-}
-.page-content .wrapper {
-	background: #EEE;
-	box-shadow: 0 1px 4px #999;
-	outline: 1px solid #CCC;
+
+	.wrapper {
+		background: #EEE;
+		box-shadow: 0 1px 4px #999;
+		outline: 1px solid #CCC;
+		&:after {
+			clear:both;
+			content: '';
+			display:block;
+		}
+	}
+	
+	img {
+		max-width:100%;
+	}
 }
 
 // Colum
@@ -128,6 +133,7 @@
 			padding: 5px 10px;
 			text-decoration: none;
 			border-radius: 5px;
+    		white-space: nowrap;
 			
 			&:hover {
 				transition: background 0.3s ease;
