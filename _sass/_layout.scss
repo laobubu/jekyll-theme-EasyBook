@@ -48,6 +48,7 @@
 			clear:both;
 			content: '';
 			display:block;
+			height: 20px;
 		}
 	}
 	
@@ -157,6 +158,9 @@
 @include media-query($on-laptop) {
 	.page-content {
 		padding: 0;
+		.wrapper:after {
+			height: 0px;
+		}
 	}
 	.footer {
 		padding: 15px 0 ;
