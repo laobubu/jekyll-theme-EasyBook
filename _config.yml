@@ -1,17 +1,22 @@
 # Site settings
-title: laobubu的博客
-email: laobubu@gmail.com
-author: laobubu
-avatar: "//www.gravatar.com/avatar/ebcd5f8f5e1cdbbd8b81058d52c252be?s=135"
+title: Another Blog
+email: your_email@example.com
+author: your_name
+avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
 profile: > # until "timezone:"
-  A blogging guy.
-timezone: Asia/Chongqing
+  One sentence introducing yourself.
+#timezone: Asia/Chongqing
 description: > # this means to ignore newlines until "baseurl:"
-  大概就是一个乱七八糟的地方而已。
+  One or more sentences introducing this blog.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://note.laobubu.net" # the base hostname & protocol for your site
-twitter_username: laobubu
-github_username:  laobubu
+url: "" # the base hostname & protocol for your site
+#twitter_username: twitter_username
+#github_username:  github_username
+
+# Comment Service (Disqus or 多说)
+#  choose one and un-comment the line to active it
+#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
+#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
 permalink: /archivers/:title
 
@@ -28,3 +33,4 @@ redcarpet:
     - autolink
     - strikethrough
     - fenced_code_blocks
+    - tables

@@ -45,3 +45,25 @@ pre code {
 .center {
 	text-align: center;
 }
+table {
+	border-spacing: 0;
+
+	td, th {
+		padding: 3px 10px;
+		margin: 0;
+	}
+	
+	th {
+		background: #555;
+		color: #eee;
+		font-weight:normal;
+	}
+	
+	tr>td:nth-child(even) {
+		background: rgba(0,0,0,0.02);
+	}
+	
+	tr:hover {
+		background: rgba(255,255,255,0.7);
+	}
+}

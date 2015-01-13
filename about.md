@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 关于
+title: About
 permalink: /about/
 public: true
 ---
@@ -18,4 +18,4 @@ https://github.com/laobubu/laobubu.github.io/tree/template
 
 希望你能在此页面保留下面这一行信息，谢谢！Start blogging!
 
-> 此站点模板采用 laobubu.net 的 [EasyBook](https://github.com/laobubu/laobubu.github.io/tree/template)
+> 此站点模板采用 [laobubu.net](http://laobubu.net) 的 [EasyBook](https://github.com/laobubu/laobubu.github.io/tree/template)
