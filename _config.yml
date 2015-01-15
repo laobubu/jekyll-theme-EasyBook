@@ -24,7 +24,7 @@ permalink: /archivers/:title
 paginate: 5
 paginate_path: "page:num"
 
-highlighter: true
+highlighter: pygments
 markdown: redcarpet
 redcarpet:
   extensions:
