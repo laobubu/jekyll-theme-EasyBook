@@ -83,7 +83,38 @@ function TOC(toc,content) {
     win.resize(s1);
 }
 
+function SelectAll(obj,tips) {
+    if (!window.getSelection) return null;
+    
+    var selection=window.getSelection();
+    var z = $('<div class="util-notify1"></div>');
+    z.text(tips);
+    $(document.body).append(z);
+    z.hide();
+    z.mouseover(function() {
+        z.hide();
+    })
+    
+    obj.click(function(e){
+        if (!selection.isCollapsed) return;
+        
+        var tt = e.pageY-z.outerHeight() - 15;
+        z.css({left:(e.pageX-z.outerWidth()/2)+'px',top:(tt+10)+'px'});
+        z.stop(true);
+        z.animate({top:tt,opacity:1.0},200).delay(300).animate({opacity:0.0},200);
+        z.show();
+    }).dblclick(function(e){
+        selection.selectAllChildren(e.currentTarget);
+        z.stop(true);
+        z.hide();
+    })
+    
+    return true;
+}
+
 $(function(){
     var toc=$('.post-toc');
     toc && (new TOC(toc, $('.post-content')));
+    
+    new SelectAll($(".highlight pre"), "Dblclick to select all");
 });
