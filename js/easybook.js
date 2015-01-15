@@ -55,21 +55,29 @@ function TOC(toc,content) {
     toc.append(uls[0]);
     toc.css({display:'block'});
     
+    var maxHeightTOC = '';
     var win = $(window);
     var ppc = $('.post-content');
     var s1 = function(){
-        var a=scrolldummy.offset().top,b1=b.scrollTop(),d={},c;
+        var a=scrolldummy.offset().top,b1=win.scrollTop(),d,c;
         if((c=b1-a+10)<0) c=0;
         if (c) {
             b1 = (win.height()-20);
             var vq = ppc.offset().top+ppc.height()-a-uls[0].height();
             if (c>vq) c=vq;
-            d.maxHeight = b1 + 'px';
+            d = b1 + 'px';
         } else {
-            d.maxHeight = "auto";
+            d = "";
+        }
+        if (d != maxHeightTOC) {
+            maxHeightTOC = d;
+            if (d) {
+                uls[0].css({position:'fixed', top:'10px', maxHeight:d});
+            } else {
+                uls[0].attr("style","");
+            }
         }
         scrolldummy.height(c+'px');
-        uls[0].css(d);
     };
     win.scroll(s1);
     win.resize(s1);
