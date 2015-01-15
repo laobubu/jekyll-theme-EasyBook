@@ -72,7 +72,7 @@ function TOC(toc,content) {
         if (d != maxHeightTOC) {
             maxHeightTOC = d;
             if (d) {
-                uls[0].css({position:'fixed', top:'10px', maxHeight:d});
+                uls[0].css({position:'fixed', top:'10px', maxHeight:d, width:toc.width()+"px"});
             } else {
                 uls[0].attr("style","");
             }
