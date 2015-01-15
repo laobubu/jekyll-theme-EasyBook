@@ -42,6 +42,7 @@ There are some Chinese words on the pages but you can translate/substitute them 
 |         :-----:           |   :-------:   |   :-------:   |
 |`_includes/sidebar.html`   | 最新文章      | Newest Posts  |
 |`about.md`                 | *Everything*  | *Up to you*   |
+|`404.md`                   | *Everything*  | *Up to you*   |
 |`index.html`               | 通过 RSS 订阅 | RSS Feed      |
 |`index.html`               | 文章列表      | Posts         |
 |`index.html`               | 前一页        | Prev (Page)   |
