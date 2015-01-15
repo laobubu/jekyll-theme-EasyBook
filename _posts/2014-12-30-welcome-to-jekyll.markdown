@@ -57,7 +57,7 @@ You can replace it in `_includes/head.html` with your favorite CDN like Google C
 
 I hope you can leave a message on `about.md` like this (with links):
 
-> This website is using [laobubu](http://laobubu.net)'s theme: [EasyBook](https://github.com/laobubu/laobubu.github.io/tree/template)
+> This website is using [laobubu](http://laobubu.net)'s theme: [EasyBook](https://github.com/laobubu/jekyll-theme-EasyBook)
 
 I don't add it to the footer because I want to make the footer simple :)
 
@@ -81,4 +81,4 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-help]: https://github.com/jekyll/jekyll-help
 [frontmatter]: http://jekyllrb.com/docs/frontmatter/
-[github-easybook]: https://github.com/laobubu/laobubu.github.io/tree/template
+[github-easybook]: https://github.com/laobubu/jekyll-theme-EasyBook
