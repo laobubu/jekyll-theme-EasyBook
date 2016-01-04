@@ -34,3 +34,4 @@ redcarpet:
     - strikethrough
     - fenced_code_blocks
     - tables
+    - footnotes
