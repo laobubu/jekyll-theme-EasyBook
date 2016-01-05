@@ -117,4 +117,10 @@ $(function(){
     toc && (new TOC(toc, $('.post-content')));
     
     new SelectAll($(".highlight pre"), "Dblclick to select all");
+    
+    $('.post-content > p > img').each(function(){
+        if (this.parentElement.childNodes.length == 1) {
+            $(this).addClass('middle-image');
+        }
+    })
 });
