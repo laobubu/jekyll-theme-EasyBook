@@ -1,15 +1,16 @@
 # Site settings
 title: Another Blog
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+#timezone: Asia/Chongqing
+description: >
+  One or more sentences introducing this blog.
+
+# Your information
 email: your_email@example.com
 author: your_name
 avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: > # until "timezone:"
-  One sentence introducing yourself.
-#timezone: Asia/Chongqing
-description: > # this means to ignore newlines until "baseurl:"
-  One or more sentences introducing this blog.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+profile: One sentence introducing yourself.
 #twitter_username: twitter_username
 #github_username:  github_username
 
@@ -19,6 +20,8 @@ url: "" # the base hostname & protocol for your site
 #duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
 permalink: /archivers/:title
+gems:
+ - jekyll-paginate
 
 # Build settings
 paginate: 5

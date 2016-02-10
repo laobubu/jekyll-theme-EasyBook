@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="home">
-  <a class="rss-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">通过 RSS 订阅</a>
-  <h1 class="page-heading">文章列表</h1>
+  <a class="rss-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+  <h1 class="page-heading">Articles</h1>
 
   <ul class="post-list">
     {% for post in paginator.posts %}
@@ -21,15 +21,15 @@ layout: default
   <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">前一页</a>
+    <a href="{{ paginator.previous_page_path }}" class="previous">PREV</a>
   {% else %}
-    <span class="previous">前一页</span>
+    <span class="previous">PREV</span>
   {% endif %}
-  <span class="page_number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+  <span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">后一页</a>
+    <a href="{{ paginator.next_page_path }}" class="next">NEXT</a>
   {% else %}
-    <span class="next ">后一页</span>
+    <span class="next ">NEXT</span>
   {% endif %}
 </div>
 
