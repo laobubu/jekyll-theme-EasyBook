@@ -46,24 +46,25 @@ pre code {
 	text-align: center;
 }
 table {
+	border-collapse: collapse;
 	border-spacing: 0;
+    margin: 10pt auto;
+	background: #FFF;
 
 	td, th {
-		padding: 3px 10px;
+		border: 1px solid #CCC;
+		padding: 5px 15px;
 		margin: 0;
 	}
 	
 	th {
+		border-color: #555;
 		background: #555;
 		color: #eee;
 		font-weight:normal;
 	}
 	
-	tr>td:nth-child(even) {
-		background: rgba(0,0,0,0.02);
-	}
-	
 	tr:hover {
-		background: rgba(255,255,255,0.7);
+		background: rgba(255,255,0,0.2);
 	}
 }
