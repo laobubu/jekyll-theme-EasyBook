@@ -4,12 +4,12 @@
 @charset "utf-8";
 
 
-$base-font-family: Helvetica, Arial, "Noto Sans CJK SC", "Hiragino Sans GB", "微软雅黑", sans-serif;
+$base-font-family: Helvetica, Arial, "PingFang SC", "Noto Sans CJK SC", "Hiragino Sans GB", "微软雅黑", sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$code-font-family:   Menlo, Consolas, "Courier New", Courier, "Liberation Mono", "文泉驿等宽微米黑", SimSun, monospace;
+$code-font-family:   Menlo, Monaco, Consolas, "DejaVu Sans Mono", "Liberation Mono", "文泉驿等宽微米黑", "Courier New", Courier, SimSun, monospace;
 $code-font-size:     15px;
 
 // Width of the content area
