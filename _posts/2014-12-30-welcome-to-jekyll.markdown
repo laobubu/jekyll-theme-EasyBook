@@ -32,45 +32,23 @@ You are using [EasyBook][github-easybook] the template from [laobubu.net](http:/
 
 > **Tips:** You can disable Disqus or 多说 on posts/pages by adding `nocomments: true` into [YAML Front Matter][frontmatter].
 
-## Translation ##
-
-There are some Chinese words on the pages but you can translate/substitute them quickly:
-
-|           File            |    Chinese    |    English    |
-|         :-----:           |   :-------:   |   :-------:   |
-|`_includes/sidebar.html`   | 最新文章      | Newest Posts  |
-|`about.md`                 | *Everything*  | *Up to you*   |
-|`404.md`                   | *Everything*  | *Up to you*   |
-|`index.html`               | 通过 RSS 订阅 | RSS Feed      |
-|`index.html`               | 文章列表      | Posts         |
-|`index.html`               | 前一页        | Prev (Page)   |
-|`index.html`               | 后一页        | Next (Page)   |
-
-Besides, I use upaiyun CDN to make everyone lncluding Chinese visitors feel speedy. 
-
-You can replace it in `_includes/head.html` with your favorite CDN like Google CDN.
+EasyBook uses upaiyun CDN to make everyone lncluding Chinese visitors feel speedy. You can find it in `_includes/footer.html` and change it to your favorite CDN like Google CDN.
 
 ## Support me by... ##
 
 ### Add a link ###
 
-I hope you can leave a message on `about.md` like this (with links):
+EasyBook does not make the footer heavy; the link to theme could be on `about.md`:
 
 > This website is using [laobubu](http://laobubu.net)'s theme: [EasyBook](https://github.com/laobubu/jekyll-theme-EasyBook)
 
-I don't add it to the footer because I want to make the footer simple :)
+### Donate (PayPal or 支付宝) ###
 
-### PayPal Donate ###
-
-Well, I'd appreciate! :D
-
-The "donate" button is here: http://laobubu.net/donate.html
+That's the best :D. Please visit http://laobubu.net/donate.html
 
 ### Star and Fork on GitHub (free) ###
 
-No attend to donate? That's okay. You can also star and fork my project...
-
-... like this template/theme [EasyBook][github-easybook]
+Not going to donate? That's okay. You can also send out your precious star [on GitHub][github-easybook].
 
 ## And Here We Go ##
 
