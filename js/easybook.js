@@ -1,7 +1,8 @@
 /*!
  * EasyBook Jekyll Theme Javascript
- * http://laobubu.net
- * https://github.com/laobubu/laobubu.github.io/tree/template
+ * 
+ * http://laobubu.github.io/jekyll-theme-EasyBook
+ * https://github.com/laobubu/jekyll-theme-EasyBook
  *
  * This is just a extension for my theme.
  */
@@ -12,7 +13,8 @@ function TOC(toc,content) {
     
     var generateLink = function(h) {
         var q = $('<a></a>');
-        var hash = 'generated-hash-' + (cnt++);
+        cnt++;
+        var hash = h.attr('id') || ('generated-hash-' + cnt);
         q.text(h.text());
         q.attr('href', '#' + hash );
         q.click(function(e){ b.animate({scrollTop: (h.offset().top) + 'px'},200);e.preventDefault()});
