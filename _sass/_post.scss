@@ -23,7 +23,19 @@
     		padding: 10px;
         }
     }
-    .post-content {	
+    .post-content {
+        h1, h2 {
+        	margin: 10px -10px;
+            margin-top: 30px;
+            @include media-query($on-palm) {
+                margin: 0 0;
+            }
+        }
+        
+        h1, h2, h3 {
+            border-bottom: 1px solid #CCC;
+        }
+        
         pre {
         	margin: 0 -30px;
             @include media-query($on-palm) {
