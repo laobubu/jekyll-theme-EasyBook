@@ -7,7 +7,7 @@
  * This is just a extension for my theme.
  */
 
-function TOC(toc,content) {
+function TOCize(toc,content) {
     var b = $('body');
     var cnt = 0;
     
@@ -85,7 +85,7 @@ function TOC(toc,content) {
     win.resize(s1);
 }
 
-function SelectAll(obj,tips) {
+function SelectAllize(obj,tips) {
     if (!window.getSelection) return null;
     
     var selection=window.getSelection();
@@ -106,7 +106,7 @@ function SelectAll(obj,tips) {
         z.animate({top:tt,opacity:1.0},200).delay(300).animate({opacity:0.0},200);
         z.show();
     }).dblclick(function(e){
-        selection.selectAllChildren(e.currentTarget);
+        selection.selectAllChildren(this);
         z.stop(true);
         z.hide();
     })
@@ -114,15 +114,21 @@ function SelectAll(obj,tips) {
     return true;
 }
 
-$(function(){
+function RealLoad(){
+    if (!window.$) {
+        setTimeout(RealLoad, 100);
+        return;
+    }
     var toc=$('.post-toc');
-    toc && (new TOC(toc, $('.post-content')));
+    toc.length && TOCize(toc, $('.post-content'));
     
-    new SelectAll($(".highlight pre"), "Dblclick to select all");
+    SelectAllize($("pre.highlight"), "Dblclick to select all");
     
     $('.post-content > p > img').each(function(){
         if (this.parentElement.childNodes.length == 1) {
             $(this).addClass('middle-image');
         }
     })
-});
+}
+
+RealLoad()
