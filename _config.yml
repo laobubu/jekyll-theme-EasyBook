@@ -1,7 +1,7 @@
 # Site settings
 title: Another Blog
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "http://laobubu.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+baseurl: "/jekyll-theme-EasyBook" # the prefix of your site uri, eg. `/jekyll-theme-EasyBook` or just one slash `/`
 #timezone: Asia/Chongqing
 description: >
   One or more sentences introducing this blog.
@@ -27,14 +27,9 @@ gems:
 paginate: 5
 paginate_path: "page:num"
 
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions:
-    - hard_wrap
-    - no_intra_emphasis
-    - autolink
-    - strikethrough
-    - fenced_code_blocks
-    - tables
-    - footnotes
+highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
