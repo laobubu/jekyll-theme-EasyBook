@@ -44,7 +44,9 @@ EasyBook does not make the footer heavy; the link to theme could be on `about.md
 
 ### Donate (PayPal or 支付宝) ###
 
-That's the best :D. Please visit http://laobubu.net/donate.html
+That's the best :smile: 
+
+Please visit [http://laobubu.net/donate.html](http://laobubu.net/donate.html)
 
 ### Star and Fork on GitHub (free) ###
 

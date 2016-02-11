@@ -22,6 +22,8 @@ profile: One sentence introducing yourself.
 permalink: /archivers/:title
 gems:
  - jekyll-paginate
+ - jekyll-gist
+ - jemoji
 
 # Build settings
 paginate: 5
