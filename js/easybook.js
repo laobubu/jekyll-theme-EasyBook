@@ -115,10 +115,6 @@ function SelectAllize(obj,tips) {
 }
 
 function RealLoad(){
-    if (!window.$) {
-        setTimeout(RealLoad, 100);
-        return;
-    }
     var toc=$('.post-toc');
     toc.length && TOCize(toc, $('.post-content'));
     
@@ -131,4 +127,4 @@ function RealLoad(){
     })
 }
 
-RealLoad()
+$(RealLoad)
