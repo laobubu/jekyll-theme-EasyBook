@@ -48,14 +48,24 @@
 	padding: 30px 0;
 
 	.wrapper {
-		background: #EEE;
+		position: relative;
+		background: #FAFAFA;
 		box-shadow: 0 1px 4px #999;
 		outline: 1px solid #CCC;
 		&:after {
 			clear:both;
 			content: '';
 			display:block;
-			height: 30px;
+		}
+		&:before {
+			content: '';
+			display:block;
+			position: absolute;
+			width: 300px;
+			height: 100%;
+			left: 800px;
+			top: 0;
+			background: #EEE;
 		}
 	}
 	
@@ -67,19 +77,19 @@
 // Colum
 .col-main {
 	position: relative;
-	float:left;
-	width: 100%;
+	box-sizing: border-box;
 	padding: 30px;
-	background: #FAFAFA;
-	max-width: 740px;
-	z-index:10;
+	width: 800px;
+	float: left;
 }
 .col-second {
 	position: relative;
+	box-sizing: border-box;
 	float: left;
-	width: 260px;
-	height: 100%;
+	width: 300px;
 	padding: 20px;
+	background: #EEE;
+	z-index: 10;
 }
 .col-box{
 	color: #666;
@@ -106,6 +116,9 @@
     }
 }
 @media (max-width: 1120px) {
+	.page-content .wrapper:before {
+		display: none;
+	}
 	.col-main,
 	.col-second {
 		width: auto;
@@ -119,6 +132,11 @@
 	.col-box:not(:first-child) {
 		border-top: none;
 		padding-top:0;
+	}
+	.col-second:after {
+		clear: both;
+		display: block;
+		content: ' ';
 	}
 }
 .col-box-author {
@@ -165,9 +183,6 @@
 @include media-query($on-laptop) {
 	.page-content {
 		padding: 0;
-		.wrapper:after {
-			height: 0px;
-		}
 	}
 	.footer {
 		padding: 15px 0 ;
@@ -192,16 +207,5 @@
 	}
 	pre {
 		padding: 10px;
-	}
-}
-
-//Holy Grail Fix
-@media (min-width: 1121px) {
-	.col-main, .col-second {
-		padding-bottom:60000px;
-		margin-bottom:-60000px;
-	}
-	.page-content .wrapper {
-		overflow:hidden;
 	}
 }
