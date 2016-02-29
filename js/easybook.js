@@ -11,28 +11,41 @@ function TOCize(toc,content) {
     var b = $('body');
     var cnt = 0;
     
+    var make = function(tag) {
+        return document.createElement(tag)
+    }
+    
     var generateLink = function(h) {
-        var q = $('<a></a>');
+        var q = make('a');
         cnt++;
-        var hash = h.attr('id') || ('generated-hash-' + cnt);
-        q.text(h.text());
-        q.attr('href', '#' + hash );
-        q.click(function(e){ b.animate({scrollTop: (h.offset().top) + 'px'},200);e.preventDefault()});
+        var hash = h.getAttribute('id');
+        if (!hash) {
+            hash = ('generated-hash-' + cnt);
+            h.setAttribute('id', hash);
+        }
+        q.textContent = h.textContent;
+        q.setAttribute('href', '#' + hash );
+        q.addEventListener('click', 
+            function(e){ 
+                b.animate({scrollTop: (h.offset().top) + 'px'},200);
+                e.preventDefault();
+            }
+            ,false);
         return q;
     };
     
-    var hs = content.children('h1, h2, h3, h4, h5, h6');
+    var hs = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
     var cul = null, plevel = 1;
-    var uls = [$('<ul></ul>')];
+    var uls = [make('ul')];
     for (var i=0;i<hs.length;i++) {
         var level = +hs[i].tagName.substr(1);
-        var hi = $(hs[i]);
-        var ti = $('<li></li>');
-        ti.append(generateLink(hi));
+        var hi = hs[i];
+        var ti = make('li');
+        ti.appendChild(generateLink(hi));
         if (plevel < level) {
             do {
-                uls.push($('<ul></ul>'));
-                uls[uls.length-2].append(uls[uls.length-1]);
+                uls.push(make('ul'));
+                uls[uls.length-2].appendChild(uls[uls.length-1]);
             } while (++plevel < level);
         } else if (plevel > level) {
             do {
@@ -40,10 +53,10 @@ function TOCize(toc,content) {
             } while (--plevel > level);
         }
         cul = uls[uls.length-1];
-        cul.append(ti);
+        cul.appendChild(ti);
     }
     while(true) {
-        var chs = uls[0].children();
+        var chs = uls[0].children;
         if (chs.length == 1 && chs[0].tagName == 'UL')
             uls.shift();
         else
@@ -52,20 +65,20 @@ function TOCize(toc,content) {
     
     if (!cnt) return false;
     
-    var scrolldummy=$('<div></div>');
-    toc.append(scrolldummy);
-    toc.append(uls[0]);
-    toc.css({display:'block'});
+    var scrolldummy=make('div');
+    toc.appendChild(scrolldummy);
+    toc.appendChild(uls[0]);
+    toc.style.display = 'block';
     
     var maxHeightTOC = '';
     var win = $(window);
     var ppc = $('.post-content');
     var s1 = function(){
-        var a=scrolldummy.offset().top,b1=win.scrollTop(),d,c;
+        var a=scrolldummy.getBoundingClientRect().top + document.body.scrollTop,b1=win.scrollTop(),d,c;
         if((c=b1-a+10)<0) c=0;
         if (c) {
             b1 = (win.height()-20);
-            var vq = ppc.offset().top+ppc.height()-a-uls[0].height();
+            var vq = ppc.offset().top+ppc.height()-a-uls[0].offsetHeight;
             if (c>vq) c=vq;
             d = b1 + 'px';
         } else {
@@ -74,12 +87,12 @@ function TOCize(toc,content) {
         if (d != maxHeightTOC) {
             maxHeightTOC = d;
             if (d) {
-                uls[0].css({maxHeight:d, width:(toc.width()-20)+"px"});
+                uls[0].setAttribute('style', 'maxHeight:' + d + '; width:' + (toc.offsetWidth-20) + "px" );
             } else {
-                uls[0].attr("style","");
+                uls[0].setAttribute("style","");
             }
         }
-        scrolldummy.height(c+'px');
+        scrolldummy.style.height = (c+'px');
     };
     win.scroll(s1);
     win.resize(s1);
@@ -115,8 +128,8 @@ function SelectAllize(obj,tips) {
 }
 
 function RealLoad(){
-    var toc=$('.post-toc');
-    toc.length && TOCize(toc, $('.post-content'));
+    var toc=document.querySelector('.post-toc');
+    toc && TOCize(toc, document.querySelector('.post-content'));
     
     SelectAllize($("pre.highlight"), "Dblclick to select all");
     
@@ -127,4 +140,4 @@ function RealLoad(){
     })
 }
 
-$(RealLoad)
+RealLoad()
