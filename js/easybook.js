@@ -8,7 +8,6 @@
  */
 
 function TOCize(toc,content) {
-    var b = $('body');
     var cnt = 0;
     
     var make = function(tag) {
@@ -89,15 +88,17 @@ function TOCize(toc,content) {
     toc.style.display = 'block';
     
     var maxHeightTOC = '';
-    var win = $(window);
-    var ppc = $('.post-content');
+    var ppc = document.querySelector('.col-main');
     var s1 = function(){
-        var a=scrolldummy.getBoundingClientRect().top + document.body.scrollTop,b1=win.scrollTop(),d,c;
-        if((c=b1-a+10)<0) c=0;
+        var b1=document.body.scrollTop,a=scrolldummy.getBoundingClientRect().top,d,c;
+        if((c=-a+10)<0) c=0;
         if (c) {
-            b1 = (win.height()-20);
-            var vq = ppc.offset().top+ppc.height()-a-uls[0].offsetHeight;
+            var wh = window.innerHeight
+                || document.documentElement.clientHeight
+                || document.body.clientHeight;
+            var vq = ppc.offsetHeight - b1 - a - uls[0].offsetHeight;
             if (c>vq) c=vq;
+            b1 = (wh-20);
             d = b1 + 'px';
         } else {
             d = "";
@@ -105,15 +106,15 @@ function TOCize(toc,content) {
         if (d != maxHeightTOC) {
             maxHeightTOC = d;
             if (d) {
-                uls[0].setAttribute('style', 'maxHeight:' + d + '; width:' + (toc.offsetWidth-20) + "px" );
+                uls[0].setAttribute('style', 'max-height:' + d + '; width:' + (toc.offsetWidth-20) + "px" );
             } else {
                 uls[0].setAttribute("style","");
             }
         }
         scrolldummy.style.height = (c+'px');
     };
-    win.scroll(s1);
-    win.resize(s1);
+    window.addEventListener('scroll', s1, false);
+    window.addEventListener('resize', s1, false);
 }
 
 function SelectAllize(obj,tips) {
