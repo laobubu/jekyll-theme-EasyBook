@@ -25,8 +25,9 @@ function TOCize(toc, content, matchHeightTo) {
         target: 0,
         running: 0,
         tick: function() {
-            document.body.scrollTop = (document.body.scrollTop + aniscroll.target) / 2;
-            if (Math.abs(document.body.scrollTop - aniscroll.target) < 10) {
+            var oldST = document.body.scrollTop, newST = ~~((oldST + aniscroll.target) / 2);
+            document.body.scrollTop = newST;
+            if (document.body.scrollTop < newST || Math.abs(newST - aniscroll.target) < 10) {
                 document.body.scrollTop = aniscroll.target;
                 clearInterval(aniscroll.running)
                 aniscroll.running = 0
