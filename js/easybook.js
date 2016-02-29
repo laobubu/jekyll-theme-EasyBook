@@ -98,7 +98,7 @@ function TOCize(toc, content, matchHeightTo) {
                 || document.documentElement.clientHeight
                 || document.body.clientHeight,
             cbox = matchHeightTo.getBoundingClientRect(),
-            vq = cbox.bottom - dummyClientTop - wh;
+            vq = cbox.bottom - dummyClientTop - uls[0].offsetHeight;
             if (c>vq) c=vq;
             d = (wh - (margin<<1)) + 'px';
         } else {
