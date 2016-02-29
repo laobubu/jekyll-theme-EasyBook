@@ -8,6 +8,8 @@
  */
 
 function TOCize(toc, content, matchHeightTo) {
+    if (!(toc && content && matchHeightTo)) return false
+    
     var cnt = 0;
     
     var make = function(tag) {
@@ -118,43 +120,55 @@ function TOCize(toc, content, matchHeightTo) {
     window.addEventListener('resize', s1, false);
 }
 
-function SelectAllize(obj,tips) {
+function SelectAllize(selector,tips) {
     if (!window.getSelection) return null;
     
+    var obj = document.querySelectorAll(selector);
     var selection=window.getSelection();
-    var z = $('<div class="util-notify1"></div>');
-    z.text(tips);
-    $(document.body).append(z);
-    z.hide();
-    z.mouseover(function() {
-        z.hide();
-    })
+    var z = document.createElement("div");
+    z.className = "util-notify1";
+    z.textContent = tips;
+    document.body.appendChild(z)
     
-    obj.click(function(e){
+    function hide() {
+        z.classList.add('hidden')
+        z.style.top = '-200px'
+    }
+    
+    hide();
+    z.addEventListener('mouseover', hide, false);
+    
+    function clickHandler(e){
         if (!selection.isCollapsed) return;
         
-        var tt = e.pageY-z.outerHeight() - 15;
-        z.css({left:(e.pageX-z.outerWidth()/2)+'px',top:(tt+10)+'px'});
-        z.stop(true);
-        z.animate({top:tt,opacity:1.0},200).delay(300).animate({opacity:0.0},200);
-        z.show();
-    }).dblclick(function(e){
+        var tt = e.pageY-z.offsetHeight - 15;
+        z.setAttribute('style', 'left:' + (e.pageX-z.offsetWidth/2) + 'px;top:' + (tt+10) + 'px');
+        z.classList.remove('hidden');
+        setTimeout(hide, 1000);
+    }
+    
+    function dblClickHandler(e){
         selection.selectAllChildren(this);
-        z.stop(true);
-        z.hide();
-    })
+        hide();
+    }
+    
+    for(var i = obj.length; i--;) {
+        var oi = obj[i];
+        oi.addEventListener('click', clickHandler, false);
+        oi.addEventListener('dblclick', dblClickHandler, false);
+    }
     
     return true;
 }
 
 function RealLoad(){
-    var toc=document.querySelector('.post-toc');
-    toc && TOCize(toc, 
+    TOCize(
+        document.querySelector('.post-toc'), 
         document.querySelector('.post-content'), 
         document.querySelector('.col-main')
     );
     
-    SelectAllize($("pre.highlight"), "Dblclick to select all");
+    SelectAllize("pre.highlight", "Dblclick to select all");
     
     var imgs = document.querySelectorAll('.post-content > p > img');
     for(var i=imgs.length; i--;){
