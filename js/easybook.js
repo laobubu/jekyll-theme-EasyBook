@@ -15,6 +15,24 @@ function TOCize(toc,content) {
         return document.createElement(tag)
     }
     
+    var aniscroll = {
+        to: function(top) {
+            aniscroll.target = top;
+            if (aniscroll.running) return;
+            aniscroll.running = setInterval(aniscroll.tick, 20);
+        },
+        target: 0,
+        running: 0,
+        tick: function() {
+            document.body.scrollTop = (document.body.scrollTop + aniscroll.target) / 2;
+            if (Math.abs(document.body.scrollTop - aniscroll.target) < 10) {
+                document.body.scrollTop = aniscroll.target;
+                clearInterval(aniscroll.running)
+                aniscroll.running = 0
+            }
+        }
+    }
+    
     var generateLink = function(h) {
         var q = make('a');
         cnt++;
@@ -27,7 +45,7 @@ function TOCize(toc,content) {
         q.setAttribute('href', '#' + hash );
         q.addEventListener('click', 
             function(e){ 
-                b.animate({scrollTop: (h.offset().top) + 'px'},200);
+                aniscroll.to(h.getBoundingClientRect().top + document.body.scrollTop);
                 e.preventDefault();
             }
             ,false);
