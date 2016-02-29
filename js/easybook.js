@@ -7,7 +7,7 @@
  * This is just a extension for my theme.
  */
 
-function TOCize(toc,content) {
+function TOCize(toc, content, matchHeightTo) {
     var cnt = 0;
     
     var make = function(tag) {
@@ -90,20 +90,21 @@ function TOCize(toc,content) {
     var maxHeightTOC = '';
     var ppc = document.querySelector('.col-main');
     var s1 = function(){
-        var b1=document.body.scrollTop,a=scrolldummy.getBoundingClientRect().top,d,c;
-        if((c=-a+10)<0) c=0;
+        var scrollTop=document.body.scrollTop, dummyClientTop=scrolldummy.getBoundingClientRect().top,
+            margin = 10,c,d; // c = dummyHeight, d = TOC.maxHeight (+'px')
+        if ((c = -dummyClientTop + margin) < 0) c = 0;
         if (c) {
             var wh = window.innerHeight
                 || document.documentElement.clientHeight
-                || document.body.clientHeight;
-            var vq = ppc.offsetHeight - b1 - a - uls[0].offsetHeight;
+                || document.body.clientHeight,
+            cbox = matchHeightTo.getBoundingClientRect(),
+            vq = cbox.bottom - dummyClientTop - wh;
             if (c>vq) c=vq;
-            b1 = (wh-20);
-            d = b1 + 'px';
+            d = (wh - (margin<<1)) + 'px';
         } else {
             d = "";
         }
-        if (d != maxHeightTOC) {
+        if (d != maxHeightTOC) { //status lock.
             maxHeightTOC = d;
             if (d) {
                 uls[0].setAttribute('style', 'max-height:' + d + '; width:' + (toc.offsetWidth-20) + "px" );
@@ -148,15 +149,19 @@ function SelectAllize(obj,tips) {
 
 function RealLoad(){
     var toc=document.querySelector('.post-toc');
-    toc && TOCize(toc, document.querySelector('.post-content'));
+    toc && TOCize(toc, 
+        document.querySelector('.post-content'), 
+        document.querySelector('.col-main')
+    );
     
     SelectAllize($("pre.highlight"), "Dblclick to select all");
     
-    $('.post-content > p > img').each(function(){
-        if (this.parentElement.childNodes.length == 1) {
-            $(this).addClass('middle-image');
+    var imgs = document.querySelectorAll('.post-content > p > img');
+    for(var i=imgs.length; i--;){
+        if (imgs[i].parentElement.childNodes.length === 1) {
+            imgs[i].classList.add('middle-image');
         }
-    })
+    }
 }
 
-RealLoad()
+RealLoad();
