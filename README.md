@@ -26,6 +26,11 @@ When something new goes to EasyBook, you can get the patches by running `git pul
 
 Read [Welcome to Jekyll and EasyBook][helloPost] and [Jekyll][jekyll] to learn how to configure.
 
+**If got trouble/inspired, please:**
+
+ - [**Read Wiki pages**](https://github.com/laobubu/jekyll-theme-EasyBook/wiki)
+ - [**Submit it as an issue**](https://github.com/laobubu/jekyll-theme-EasyBook/issues/new)
+
 ## Demo
 
 [laobubu's blog](http://blog.laobubu.net) | [empty site](http://laobubu.github.io/jekyll-theme-EasyBook)
