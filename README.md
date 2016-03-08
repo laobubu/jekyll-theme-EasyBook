@@ -15,21 +15,21 @@ Start blogging with a simple but powerful theme.
 
 ## Install
 
-Git-Clone is recommended. 
+Read [Quick Guide] to learn how to install and publish.
 
-1. Fetch the files by running `git clone https://github.com/laobubu/jekyll-theme-EasyBook.git`
-2. Add your git remote address, using `git remote add blog git@github.com:foo/bar`
-3. Do whatever you like.
-4. Push! `git push -f -u blog gh-pages` (next time just simply call `git push` )
+Read [Welcome to Jekyll and EasyBook][helloPost] and [Jekyll][jekyll] for further information.
 
-When something new goes to EasyBook, you can get the patches by running `git pull origin gh-pages`
-
-Read [Welcome to Jekyll and EasyBook][helloPost] and [Jekyll][jekyll] to learn how to configure.
-
-**If got trouble/inspired, please:**
+**If need help, please:**
 
  - [**Read Wiki pages**](https://github.com/laobubu/jekyll-theme-EasyBook/wiki)
- - [**Submit it as an issue**](https://github.com/laobubu/jekyll-theme-EasyBook/issues/new)
+ - **Google it**
+ - [**Submit an issue**](https://github.com/laobubu/jekyll-theme-EasyBook/issues/new)
+
+## Donate
+
+Buy me a coffee if you find EasyBook useful for you :smiley:
+
+Visit <http://laobubu.net/donate.html>
 
 ## Demo
 
@@ -50,5 +50,6 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-[helloPost]: http://laobubu.github.io/jekyll-theme-EasyBook/archivers/hello/
+[Quick Guide]: https://github.com/laobubu/jekyll-theme-EasyBook/wiki/Quick-Guide
+[helloPost]: http://laobubu.github.io/jekyll-theme-EasyBook/archivers/hello
 [jekyll]: http://jekyllrb.com/
