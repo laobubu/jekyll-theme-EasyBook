@@ -41,6 +41,21 @@ function TOCize(toc, content, matchHeightTo) {
         }
     }
     
+    function scrollToHeader(header, hash, ev) {
+        var y = header.getBoundingClientRect().top + aniscroll.getTop();
+        if (window.history['pushState']) {
+            window.history.pushState({}, header.textContent, "#" + hash);
+            aniscroll.to(y);
+            ev.preventDefault();
+        } else {
+            var y2 = aniscroll.getTop();
+            setTimeout(function() {
+                aniscroll.setTop(y2);
+                aniscroll.to(y);
+            }, 0);
+        }
+    }
+    
     var generateLink = function(h) {
         var q = make('a');
         cnt++;
@@ -51,12 +66,7 @@ function TOCize(toc, content, matchHeightTo) {
         }
         q.textContent = h.textContent;
         q.setAttribute('href', '#' + hash );
-        q.addEventListener('click', 
-            function(e){ 
-                aniscroll.to(h.getBoundingClientRect().top + aniscroll.getTop());
-                e.preventDefault();
-            }
-            ,false);
+        q.addEventListener('click', scrollToHeader.bind(this, h, hash), false);
         return q;
     };
     
