@@ -24,11 +24,17 @@ function TOCize(toc, content, matchHeightTo) {
         },
         target: 0,
         running: 0,
+        getTop: function() {
+            return window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        },
+        setTop: function(value) {
+            (window['scrollTo'] && window.scrollTo(window.scrollX, value))
+        },
         tick: function() {
-            var oldST = document.body.scrollTop, newST = ~~((oldST + aniscroll.target) / 2);
-            document.body.scrollTop = newST;
-            if (document.body.scrollTop < newST || Math.abs(newST - aniscroll.target) < 10) {
-                document.body.scrollTop = aniscroll.target;
+            var oldST = aniscroll.getTop(), newST = ~~((oldST + aniscroll.target) / 2);
+            aniscroll.setTop(newST);
+            if (aniscroll.getTop() < newST || Math.abs(newST - aniscroll.target) < 10) {
+                aniscroll.setTop(aniscroll.target);
                 clearInterval(aniscroll.running)
                 aniscroll.running = 0
             }
@@ -47,7 +53,7 @@ function TOCize(toc, content, matchHeightTo) {
         q.setAttribute('href', '#' + hash );
         q.addEventListener('click', 
             function(e){ 
-                aniscroll.to(h.getBoundingClientRect().top + document.body.scrollTop);
+                aniscroll.to(h.getBoundingClientRect().top + aniscroll.getTop());
                 e.preventDefault();
             }
             ,false);
@@ -93,7 +99,7 @@ function TOCize(toc, content, matchHeightTo) {
     var maxHeightTOC = '';
     var ppc = document.querySelector('.col-main');
     var s1 = function(){
-        var scrollTop=document.body.scrollTop, dummyClientTop=scrolldummy.getBoundingClientRect().top,
+        var scrollTop=aniscroll.getTop(), dummyClientTop=scrolldummy.getBoundingClientRect().top,
             margin = 10,c,d; // c = dummyHeight, d = TOC.maxHeight (+'px')
         if ((c = -dummyClientTop + margin) < 0) c = 0;
         if (c) {
