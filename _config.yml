@@ -1,37 +1,36 @@
-permalink: /blog/:year/:month/:title.html 
-include: ['.htaccess']
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
-markdown: kramdown
-highlights: pygments
-url: 
-cdn_url: 7u2t01.com1.z0.glb.clouddn.com
-lsi: false
-safe: true
-timezone: Asia/Shanghai
-auto: false 
+# Site settings
+title: Another Blog
+url: "http://laobubu.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+#timezone: Asia/Chongqing
+description: >
+  One or more sentences introducing this blog.
 
-paginate: 8
+# Your information
+email: your_email@example.com
+author: your_name
+avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
+profile: One sentence introducing yourself.
+#twitter_username: twitter_username
+#github_username:  github_username
+
+# Comment Service (Disqus or 多说)
+#  choose one and un-comment the line to active it
+#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
+#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
+
+permalink: /archivers/:title
+gems:
+ - jekyll-paginate
+ - jekyll-gist
+ - jemoji
+
+# Build settings
+paginate: 5
 paginate_path: "page:num"
 
+highlighter: rouge
+markdown: kramdown
+
 kramdown:
-  auto_ids: true,
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-JB :
-  IMAGE_PATH : http://coolshell.info/images
-
-# presonal config
-domain: http://coolshell.info
-title: Lippi-浮生志
-description: Draw my life with code
-author: Lippi.OuYang
-email: ouyanglip@gmail.com
-github: LippiOuYang
-
-config:
-  js_dir:
-  img_dir:
-  css_dir:
+  input: GFM
+  syntax_highlighter: rouge
