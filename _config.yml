@@ -1,15 +1,15 @@
 # Site settings
-title: Another Blog
+title: 木杉稼轩
 url: "http://iamzhuoxuan.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
-#timezone: Asia/Chongqing
+timezone: Asia/Guangzhou
 description: >
-  One or more sentences introducing this blog.
-
+  记录卓璇的所思所想。
+  
 # Your information
-email: your_email@example.com
-author: your_name
+email: iamzhuoxuan@gmail.com
+author: zhuoxuan
 avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: One sentence introducing yourself.
+profile: 卓璇 90后
 #twitter_username: twitter_username
 #github_username:  github_username
 
@@ -25,7 +25,7 @@ gems:
  - jemoji
 
 # Build settings
-paginate: 5
+paginate: 10
 paginate_path: "page:num"
 
 highlighter: rouge
