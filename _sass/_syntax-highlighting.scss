@@ -19,7 +19,10 @@
     .kn { color: #f92672 } /* Keyword.Namespace */
     .kp { color: #66d9ef } /* Keyword.Pseudo */
     .kr { color: #66d9ef } /* Keyword.Reserved */
-    .kt { color: #66d9ef } /* Keyword.Type */
+    .kt { color: #66d9ef; 
+        font-style: italic; 
+    }
+    /* Keyword.Type */
     .ld { color: #e6db74 } /* Literal.Date */
     .m { color: #ae81ff } /* Literal.Number */
     .s { color: #e6db74 } /* Literal.String */
