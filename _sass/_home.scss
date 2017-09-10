@@ -76,6 +76,11 @@
 		padding: 10px;
     }
 }
+.post-item {
+    opacity: 0;
+    position: relative;
+    left: -55px;
+}
 .pagination {
 	text-align:center;
 	text-decoration:none;
