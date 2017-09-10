@@ -178,7 +178,17 @@ function SelectAllize(selector,tips) {
     return true;
 }
 
-function RealLoad(){
+function initAnimate() {
+    $(".post-item").each(function() {
+        $(this).animate({
+            opacity: 1,
+            left: 0
+        }, 500);
+    });
+}
+
+function RealLoad() {
+    initAnimate();
     TOCize(
         document.querySelector('.post-toc'), 
         document.querySelector('.post-content'), 
