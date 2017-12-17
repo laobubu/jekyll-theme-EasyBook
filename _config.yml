@@ -10,9 +10,9 @@ description: >
 email: your_email@example.com
 author: your_name
 avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: One sentence introducing yourself.
+profile: 신입 웹개발자의 이야기를 담고있습니다 :)
 #twitter_username: twitter_username
-#github_username:  github_username
+#github_username:  serverwizard
 
 # Comment Service (Disqus or 多说)
 #  choose one and un-comment the line to active it
