@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
   <a class="rss-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS Feed</a>
-  <h1 class="page-heading">Articles</h1>
+  <h1 class="page-heading">포스팅</h1>
 
   <ul class="post-list">
     {% for post in paginator.posts %}
@@ -24,7 +24,7 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-  
+
   <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
