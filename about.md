@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 어바웃
 permalink: /about/
 public: true
 ---
