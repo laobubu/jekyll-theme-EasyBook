@@ -193,6 +193,14 @@ function RealLoad(){
             imgs[i].classList.add('middle-image');
         }
     }
+
+    if (document.querySelector('script[type~="math/tex"]')) {
+        var sc = document.createElement('script');
+        sc.setAttribute('type', 'text/javascript');
+        sc.setAttribute('async', 'true');
+        sc.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML');
+        document.body.appendChild(sc);
+    }
 }
 
 RealLoad();

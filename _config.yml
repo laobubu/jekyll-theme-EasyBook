@@ -20,7 +20,7 @@ profile: One sentence introducing yourself.
 #duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
 permalink: /archivers/:title
-gems:
+plugins:
  - jekyll-paginate
  - jekyll-gist
  - jemoji
@@ -35,3 +35,4 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  math_engine: mathjax

@@ -20,6 +20,21 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 ```
 
+And $$\mathcal{ Mathematics }$$ is supported!
+
+Use `$$` to wrap your formulas. For example, `$$ e^{i\pi} + 1 = 0 $$` displays $$  e^{i\pi} + 1 = 0  $$
+
+Multi-line forumlas are supported too.
+
+$$
+\begin{aligned}
+& J(w, b) = \frac{1}{m} \sum_{i=1}^{m}L(\hat{y}^{(i)}, y^{(i)})
++ \frac{\lambda}{2m} \sum_{l=1}^{L}{||w||}^2_F\\\\
+& {||w||}^2_F = \sum_{i = 1}^{n[l]}\sum_{j = 1}^{n[l-1]}(w_{ij})^2
+\end{aligned}
+$$
+
+
 ## EasyBook Advanced Functions ##
 
 You are using [EasyBook][github-easybook] the template from [laobubu.net](http://laobubu.net). Therefore some features are supported now:
