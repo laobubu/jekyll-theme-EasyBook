@@ -44,6 +44,15 @@ paginate_path: "page:num"
 highlighter: rouge
 markdown: kramdown
 
+# https://jekyllrb.com/docs/configuration/#precedence
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge
