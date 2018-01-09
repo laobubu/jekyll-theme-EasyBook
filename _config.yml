@@ -13,11 +13,23 @@ avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
 profile: One sentence introducing yourself.
 #twitter_username: twitter_username
 #github_username:  github_username
+profile_links:
+  Email: "mailto:your_email@example.com"
+  GitHub: "https://github.com/laobubu/jekyll-theme-EasyBook"
+  # You can add more profile links above, or edit _includes/sidebar.html 
 
 # Comment Service (Disqus or 多说)
 #  choose one and un-comment the line to active it
 #disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
 #duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
+
+excerpt_separator: <!--more-->
+
+header:
+  links:             # Links on the header. Link to in-site page with a slash as prefix
+    About: /about/
+    Category: /category/
+    Donate: https://laobubu.net/donate.html
 
 permalink: /archivers/:title
 plugins:

@@ -2,10 +2,9 @@
   <div class="wrapper">
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     <nav class="site-nav">
-      {% for page in site.pages %}
-        {% if page.title and page.public %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endif %}
+      {% for link in site.header.links %}{% assign url = link[1] %}
+        {% assign urlchk = url | split: "/" %}{% if urlchk[0] == '' and urlchk[1] != '' %}{% assign uprefix = site.baseurl %}{% else %}{% assign uprefix = ''%}{% endif %}
+        <a class="page-link" href="{{ url | prepend: uprefix }}">{{ link[0] }}</a>
       {% endfor %}
     </nav>
   </div>
