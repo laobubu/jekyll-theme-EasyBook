@@ -1,3 +1,7 @@
+body {
+	background-color: #e0e0e3;
+}
+
 .wrapper {
 	margin: 0 auto;
 	max-width: 1100px;
@@ -46,7 +50,6 @@
 $col-secnod-width: 300px;
 
 .page-content {
-	background:#e0e0e3;
 	padding: 30px 0;
 
 	.wrapper {
@@ -175,7 +178,6 @@ $col-secnod-width: 300px;
 // footer
 .footer {
 	padding: 60px 0;
-	background-color: #e0e0e3;
 	text-align:center;
 	color:#666;
 	font-size:$small-font-size;
