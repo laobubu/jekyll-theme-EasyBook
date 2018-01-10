@@ -137,6 +137,27 @@ function TOCize(toc, content, matchHeightTo) {
     window.addEventListener('resize', s1, false);
 }
 
+function PalmSidebar() {
+    var ww = 0; //window width
+    var pcw = document.querySelector('.page-content .wrapper');
+    function s1() {
+        ww = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+
+    }
+    function toggleSidebar(e) {
+        if (ww > 1024) return; // not need on big screen
+        if (/expand-sidebar/.test(pcw.className)) 
+            pcw.className = pcw.className.replace('expand-sidebar', '');
+        else 
+            pcw.className += " expand-sidebar";
+    }
+    s1();
+    pcw.addEventListener('click', toggleSidebar, false);
+    window.addEventListener('resize', s1, false);
+}
+
 function SelectAllize(selector,tips) {
     if (!window.getSelection) return null;
     
@@ -185,6 +206,7 @@ function RealLoad(){
         document.querySelector('.col-main')
     );
     
+    PalmSidebar();
     SelectAllize("pre.highlight", "Dblclick to select all");
     
     var imgs = document.querySelectorAll('.post-content > p > img');
