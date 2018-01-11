@@ -158,7 +158,7 @@ function PalmSidebar() {
             pcw.className += " expand-sidebar";
     }
     s1();
-    pcw.addEventListener('click', toggleSidebar, false);
+    document.getElementById('sidebar-toggle').addEventListener('click', toggleSidebar, false);
     window.addEventListener('resize', s1, false);
 }
 

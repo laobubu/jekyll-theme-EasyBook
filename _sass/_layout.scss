@@ -24,6 +24,8 @@ body {
 		display: block;
 	}
 	
+    #sidebar-toggle { display: none; }
+
 	.site-title {
 		float: left;
 		color: $header-fg;
@@ -50,7 +52,21 @@ body {
 .header-placeholder { position: absolute; }
 @media (max-width: 1024px) {
     .header-placeholder { position: static; }
-    .header { position: fixed; left: 0; top: 0; right: 0; z-index: 20; }
+    .header { 
+        position: fixed; left: 0; top: 0; right: 0; z-index: 20;
+        #sidebar-toggle {
+            float: right;
+            display: block;
+            cursor: pointer;
+            margin: -10px;
+            margin-left: 0;
+            padding: 10px;
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjI0IiBzdHJva2U9IiNGRkYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48bGluZSB4MT0iMyIgeDI9IjIxIiB5MT0iMTIiIHkyPSIxMiIvPjxsaW5lIHgxPSIzIiB4Mj0iMjEiIHkxPSI2IiB5Mj0iNiIvPjxsaW5lIHgxPSIzIiB4Mj0iMjEiIHkxPSIxOCIgeTI9IjE4Ii8+PC9zdmc+);
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: transparent;
+        }
+    }
 }
 
 $col-secnod-width: 300px;
