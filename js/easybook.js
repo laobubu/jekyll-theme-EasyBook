@@ -108,8 +108,9 @@ function TOCize(toc, content, matchHeightTo) {
     
     var maxHeightTOC = '';
     var ppc = document.querySelector('.col-main');
+    var header_placeholder = document.querySelector('.header-placeholder');
     var s1 = function(){
-        var scrollTop=aniscroll.getTop(), dummyClientTop=scrolldummy.getBoundingClientRect().top,
+        var scrollTop=aniscroll.getTop(), dummyClientTop=scrolldummy.getBoundingClientRect().top - header_placeholder.offsetHeight,
             margin = 10,c,d; // c = dummyHeight, d = TOC.maxHeight (+'px')
         if ((c = -dummyClientTop + margin) < 0) c = 0;
         if (c) {
@@ -140,11 +141,14 @@ function TOCize(toc, content, matchHeightTo) {
 function PalmSidebar() {
     var ww = 0; //window width
     var pcw = document.querySelector('.page-content .wrapper');
+    var header = document.querySelector('.header');
+    var header_placeholder = document.querySelector('.header-placeholder');
     function s1() {
         ww = window.innerWidth
             || document.documentElement.clientWidth
             || document.body.clientWidth;
-
+        var h = header.getBoundingClientRect();
+        header_placeholder.style.height = (ww > 1024) ? '0px' : (h.bottom - h.top + 'px')
     }
     function toggleSidebar(e) {
         if (ww > 1024) return; // not need on big screen

@@ -47,6 +47,12 @@ body {
 	}
 }
 
+.header-placeholder { position: absolute; }
+@media (max-width: 1024px) {
+    .header-placeholder { position: static; }
+    .header { position: fixed; left: 0; top: 0; right: 0; z-index: 20; }
+}
+
 $col-secnod-width: 300px;
 
 .page-content {
