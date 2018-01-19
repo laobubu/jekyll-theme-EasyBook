@@ -151,7 +151,6 @@ function PalmSidebar() {
         header_placeholder.style.height = (ww > 1024) ? '0px' : (h.bottom - h.top + 'px')
     }
     function toggleSidebar(e) {
-        if (ww > 1024) return; // not need on big screen
         if (/expand-sidebar/.test(pcw.className)) 
             pcw.className = pcw.className.replace('expand-sidebar', '');
         else 
