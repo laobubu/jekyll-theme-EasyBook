@@ -69,7 +69,15 @@ $hide-sidebar-screen-width: 1120px;
             background-repeat: no-repeat;
             background-position: center center;
             color: transparent;
-        }
+		}
+		
+		.site-nav {
+			display: none;
+		}
+
+		&.expand-sidebar .site-nav {
+			display: block;
+		}
     }
 }
 
