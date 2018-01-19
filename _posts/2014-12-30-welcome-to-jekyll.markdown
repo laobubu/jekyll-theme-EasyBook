@@ -10,6 +10,8 @@ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
+<!--more-->
+
 GitHub Flavored Markdown is supported.
 
 ```ruby
@@ -19,6 +21,21 @@ end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 ```
+
+And $$\mathcal{ Mathematics }$$ is supported!
+
+Use `$$` to wrap your formulas. For example, `$$ e^{i\pi} + 1 = 0 $$` displays $$  e^{i\pi} + 1 = 0  $$
+
+Multi-line forumlas are supported too.
+
+$$
+\begin{aligned}
+& J(w, b) = \frac{1}{m} \sum_{i=1}^{m}L(\hat{y}^{(i)}, y^{(i)})
++ \frac{\lambda}{2m} \sum_{l=1}^{L}{||w||}^2_F\\\\
+& {||w||}^2_F = \sum_{i = 1}^{n[l]}\sum_{j = 1}^{n[l-1]}(w_{ij})^2
+\end{aligned}
+$$
+
 
 ## EasyBook Advanced Functions ##
 

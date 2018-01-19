@@ -1,0 +1,14 @@
+@keyframes ebani-fadein {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+@keyframes ebani-descend {
+    0% { transform: translateY(-10px); opacity: 0.7; }
+    100% { }
+}
+
+@keyframes ebani-ascend {
+    0% { transform: translateY(10px); }
+    100% { }
+}

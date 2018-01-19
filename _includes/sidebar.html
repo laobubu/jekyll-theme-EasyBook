@@ -9,9 +9,9 @@
     {% if site.twitter_username %}
     <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
     {% endif %}
-    {% if site.email %}
-    <a href="mailto:{{ site.email }}">Email</a>
-    {% endif %}
+    {% for link in site.profile_links %}
+    <a href="{{ link | last }}">{{ link | first }}</a>
+    {% endfor %}
   </p>
 </div>
 
