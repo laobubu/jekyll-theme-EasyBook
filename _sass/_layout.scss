@@ -77,6 +77,7 @@ $hide-sidebar-screen-width: 1120px;
 
 		&.expand-sidebar .site-nav {
 			display: block;
+			animation: ebani-fadein ease .5s 1;
 		}
     }
 }
@@ -118,6 +119,15 @@ $hide-sidebar-screen-width: 1120px;
 	padding: 30px;
 	width: $col-main-width;
 	float: left;
+	animation: ebani-descend ease .5s 1;
+	h1, h2, h3, h4, .post-meta, .rss-link {
+		animation: ebani-ascend ease .5s 1;
+	}
+	article, .post-excerpt {
+		table, pre, img {
+			animation: ebani-ascend ease .3s 1;
+		}
+	}
 }
 .col-second {
 	position: relative;
