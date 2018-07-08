@@ -230,7 +230,7 @@ function RealLoad() {
         }
     }
 
-    if (document.querySelector('script[type~="math/tex"]')) {
+    if (document.querySelector('script[type*="math/tex"]')) {
         var sc = document.createElement('script');
         sc.setAttribute('type', 'text/javascript');
         sc.setAttribute('async', 'true');
