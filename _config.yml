@@ -1,27 +1,23 @@
 # Site settings
-title: Another Blog
-url: "http://laobubu.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
-baseurl: "/jekyll-theme-EasyBook" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
+title: BNM2h
+url: "http://bnm2h.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 #timezone: Asia/Chongqing
 description: >
-  One or more sentences introducing this blog.
+  Hello. We are BNM2h.
 
 # Your information
-email: your_email@example.com
-author: your_name
+email: curieuxjy@gmail.com
+author: BNM2h
 avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: One sentence introducing yourself.
+profile: Hi.
 #twitter_username: twitter_username
-#github_username:  github_username
+github_username: BNM2h
 profile_links:
-  Email: "mailto:your_email@example.com"
-  GitHub: "https://github.com/laobubu/jekyll-theme-EasyBook"
+  Email: "curieuxjy@gmail.com"
+  GitHub: "https://github.com/BNM2h"
   # You can add more profile links above, or edit _includes/sidebar.html 
 
-# Comment Service (Disqus or 多说)
-#  choose one and un-comment the line to active it
-#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
-#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
 excerpt_separator: <!--more-->
 
@@ -29,7 +25,7 @@ header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
     About: /about/
     Category: /category/
-    Donate: https://laobubu.net/donate.html
+    Test: /test/
 
 permalink: /archivers/:title
 plugins:
