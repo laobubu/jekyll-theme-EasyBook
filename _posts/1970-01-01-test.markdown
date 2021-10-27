@@ -6,4 +6,8 @@ categories: Programming
 permalink: /archivers/test
 ---
 
-Have a fun and enjoy you time!
+```
+\begin{eqyuation}
+e^{i\pi} + = 0
+\end{equation}
+```
