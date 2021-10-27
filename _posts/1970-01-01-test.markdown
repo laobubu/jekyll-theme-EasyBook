@@ -6,8 +6,6 @@ categories: Programming
 permalink: /archivers/test
 ---
 
-```
-\begin{eqyuation}
+```LaTex
 e^{i\pi} + = 0
-\end{equation}
 ```
