@@ -1,10 +1,11 @@
 # Site settings
-title: Another Blog
+#title: Another Blog
+title: Articles
 url: "http://laobubu.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
 baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 #timezone: Asia/Chongqing
 description: >
-  One or more sentences introducing this blog.
+  Welcome to my personal blog. Enjoy!!
 
 # Your information
 #email: luel.hagos@aims.ac.rw
