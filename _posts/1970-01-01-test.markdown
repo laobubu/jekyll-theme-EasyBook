@@ -6,6 +6,6 @@ categories: Programming
 permalink: /archivers/test
 ---
 
-```LaTex
+```
 e^{i\pi} + = 0
 ```
