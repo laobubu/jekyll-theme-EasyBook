@@ -31,7 +31,7 @@ excerpt_separator: <!--more-->
 header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
     About: /about/
-    Projects: "https://github.com/Luel-Hagos/Luel-Hagos.github.io/blob/gh-pages/Projects.md"
+    Projects: /projects/
     #Donate: https://laobubu.net/donate.html
 
 permalink: /archivers/:title
