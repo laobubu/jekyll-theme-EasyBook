@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Programming."
+title:  "Programming"
 date:   2021-10-27 15:45:13
 categories: Programming
 permalink: /archivers/hello
