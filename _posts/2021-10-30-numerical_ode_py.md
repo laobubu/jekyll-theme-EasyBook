@@ -57,7 +57,8 @@ Subject to the initial conditions <img src="https://latex.codecogs.com/svg.latex
 
 2. The exact solution of the above system of ODEs is given by
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\begin{cases}
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;
+\begin{cases}
 x_1(t)& = & e^{-t/2}\\
 x_2(t)& = & -2e^{-t/2}+3e^{-t/4}\\
 x_3(t)& = & \dfrac{3}{2}e^{-t/2} - 9e^{-t/4} + \dfrac{17}{2}e^{-t/6}
