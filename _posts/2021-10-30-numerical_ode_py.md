@@ -1,13 +1,11 @@
 ---
 layout: post
-title:  "Mathmatics"
+title:  "Numerical Methods for Ordinary Differential Equations(ODEs)"
 date:   2021-10-30 03:31
 categories: Numerical method for ODEs Python
 permalink: /archivers/MathsPy
 ---
-## Numerical Methods for Ordinary Differential Equations(ODEs)
-
-Here i will show you the implementation of some of the numerical methods to solve Ordinary Differential Equations using python. And solve one problem, then plot the exact solution versus numerical method and the errors.
+## Introduction
 
 ## 1. Euler Method
 ### Theory 
