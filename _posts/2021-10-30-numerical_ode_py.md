@@ -49,7 +49,7 @@ def euler_explict(a, b, F, c, h):
 \dfrac{dx_1}{dt}& = & -\dfrac{1}{2}x_1\\\\
 \dfrac{dx_2}{dt}& = & \dfrac{1}{2}x_1-\dfrac{1}{4}x_2\\\\
 \dfrac{dx_3}{dt}& = & \dfrac{1}{4}x_2-\dfrac{1}{6}x_3
-\end{cases}, \text{ on } [0,4]"/>
+\end{cases}"/>, \text{ on } [0,4]"/>
 
 
 Subject to the initial conditions <img src="https://latex.codecogs.com/svg.latex?\normalsize&space; x_1(0) = 1, x_2(0) = 1, x_3(0) = 1
