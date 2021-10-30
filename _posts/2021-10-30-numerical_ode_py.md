@@ -19,7 +19,7 @@ be the constant length of the <img src="https://latex.codecogs.com/svg.latex?\La
 <img src="https://latex.codecogs.com/svg.latex\Large&space;(H = t_k - t_{k-1})"/>
 . Let us consider the initial value problem.
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\begin{equation}\label{eul2}
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\begin{equation}
   \begin{cases}
     y' = F(y, t),      & \quad \text{on } [a, b]\\\\
     y(a) = c,
