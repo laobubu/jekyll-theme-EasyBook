@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Numerical Methods for Ordinary Differential Equations(ODEs)"
+title:  "Numerical Methods for Ordinary Differential Equations(ODEs) using Python"
 date:   2021-10-30 03:31
 categories: Numerical method for ODEs Python
 permalink: /archivers/MathsPy
