@@ -1,15 +1,11 @@
 ---
 layout: post
-title:  "Numerical Methods for Ordinary Differential Equations(ODEs) using Python"
+title:  "Explict Euler method for Ordinary Differential Equations(ODEs) using Python"
 date:   2021-10-30 03:31
 categories: Numerical method for ODEs Python
 permalink: /archivers/MathsPy
 ---
-# Introduction
-
-# 1. Euler Method
-## 1.1 Explict Euler method
-### 1.1.1 Theory 
+## 1.1.1 Theory 
 Let <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;t_k"/> be a partition of <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;[a,b]"/> such that <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;a=t_0<t_1<\cdots<t_{N-1}<t_{N}=b"/> and <img src="https://latex.codecogs.com/svg.latex?\normalsize;H"/> 
 be the constant length of the <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;k"/>-th subinterval 
 <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;H = t_k - t_{k-1}"/>. Let us consider the initial value problem.
@@ -26,7 +22,7 @@ We can compute <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;
 
 And this iterative equation is called the Explict euler formula.
 
-### 1.1.2 Implementation and Plots
+## Implementation and Plots
   Now let us see the implementation of explict euler formula using python.
  ```python
   """
@@ -42,7 +38,7 @@ def euler_explict(a, b, F, c, h):
         y[k+1] = y[k] + h*F(y[k], t[k])
     return y               
 ```
-#### Example
+### Example
   
  1. Write code to solve the following system of ordinary differential equations
 
@@ -53,8 +49,7 @@ def euler_explict(a, b, F, c, h):
 \end{cases}"/>
 
 
-Subject to the initial conditions <img src="https://latex.codecogs.com/svg.latex?\normalsize&space; x_1(0) = 1, x_2(0) = 1, x_3(0) = 1
-"/>
+Subject to the initial conditions <img src="https://latex.codecogs.com/svg.latex?\normalsize&space; x_1(0) = 1, x_2(0) = 1, x_3(0) = 1"/>
 
 2. The exact solution of the above system of ODEs is given by
 
