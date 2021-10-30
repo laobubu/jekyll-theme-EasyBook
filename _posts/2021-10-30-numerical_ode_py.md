@@ -5,10 +5,8 @@ date:   2021-10-30 03:31
 categories: Numerical method for ODEs Python
 permalink: /archivers/test
 ---
-## Numerical Analysis
-
-
 ## Numerical Methods for Ordinary Differential Equations(ODEs)
+
 Here i will show you the implementation of some of the numerical methods to solve Ordinary Differential Equations using python. And solve one problem, then plot the exact solution versus numerical method and the errors.
 
 ## 1. Euler Method
@@ -27,10 +25,6 @@ be the constant length of the <img src="https://latex.codecogs.com/svg.latex?\La
 \end{equation}"/>
 
 We can compute $y_{k+1}$ using the iterative equation.<b>
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;
-\begin{equation}
-\boxed {y_{k+1} = y_k + HF(y_k, t_k)}
-\label{eq1}
-\end{equation}"/>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;y_{k+1} = y_k + HF(y_k, t_k)"/>
 
-And <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eqref{eq1}"/> is called the Explict euler formula.
+And this iterative equation is called the Explict euler formula.
