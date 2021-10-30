@@ -76,14 +76,14 @@ import warnings
 warnings.simplefilter("ignore")
 ```
  
+Define the exact solutions
 ```python
-# define the exact solutions
 x1t = lambda t : np.exp(-t*0.5)
 x2t = lambda t : -2*np.exp(-t*0.5) + 3*np.exp(-t*0.25)
 x3t = lambda t: 1.5*np.exp(-t*0.5) - 9*np.exp(-t*0.25) + 8.5*np.exp(-t*1/6)
 ```
+Let us define a function to plot the solutions and the error.
 ```python 
-# defining a function to plot the solutions and the error.
 def plot(time, exact, approximate, label, title, abs_er):
     
     # plot for exact vs approximation
@@ -104,7 +104,7 @@ def plot(time, exact, approximate, label, title, abs_er):
     plt.xlabel('time')
     plt.ylabel("error")
 ```
-  
+Let us define the system of the differential equation
 ```python
 # defining the system of the differential equation
 def model(x, t):
@@ -114,10 +114,8 @@ def model(x, t):
     dx3dt = 0.25*x2 - (1/6)*x3
     return np.array([dx1dt, dx2dt, dx3dt])
 ```
+And assigne the values of the parametrs and call our function.
 ```python
-"""
-Let us assigne the values of the parametrs and call our function.
-"""
 a, b = [0, 4]
 h = 0.01
 c = np.array([1, 1, 1])
