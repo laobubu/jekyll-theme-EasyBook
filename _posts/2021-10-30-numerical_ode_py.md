@@ -27,7 +27,7 @@ We can compute <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;
 
 And this iterative equation is called the Explict euler formula.
   
- ##Implementation
+ ## Implementation
   Now let us see the implementation of explict euler formula using python.
  ```python
   """
