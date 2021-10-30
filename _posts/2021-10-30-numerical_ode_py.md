@@ -3,7 +3,7 @@ layout: post
 title:  "Mathmatics"
 date:   2021-10-30 03:31
 categories: Numerical method for ODEs Python
-permalink: /archivers/test
+permalink: /archivers/MathsPy
 ---
 ## Numerical Methods for Ordinary Differential Equations(ODEs)
 
