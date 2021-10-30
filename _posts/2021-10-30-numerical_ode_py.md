@@ -11,7 +11,7 @@ permalink: /archivers/MathsPy
 ### Theory 
 Let <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;t_k"/> be a partition of <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;[a,b]"/> such that <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;a=t_0<t_1<\cdots<t_{N-1}<t_{N}=b"/> and <img src="https://latex.codecogs.com/svg.latex?\normalsize;H"/> 
 be the constant length of the <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;k"/>-th subinterval 
-<img src="https://latex.codecogs.com/svg.latex\normalsize&space;H = t_k - t_{k-1}"/>. Let us consider the initial value problem.
+<img src="https://latex.codecogs.com/svg.latex?\normalsize&space;H = t_k - t_{k-1}"/>. Let us consider the initial value problem.
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\begin{equation}
   \begin{cases}
@@ -24,8 +24,8 @@ We can compute <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;
 <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;y_{k+1} = y_k + HF(y_k, t_k)"/>
 
 And this iterative equation is called the Explict euler formula.
-  
- ## Implementation
+
+## Implementation
   Now let us see the implementation of explict euler formula using python.
  ```python
   """
