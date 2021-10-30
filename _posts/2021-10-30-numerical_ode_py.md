@@ -45,11 +45,12 @@ def euler_explict(a, b, F, c, h):
   
  1. Write code to solve the following system of ordinary differential equations
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\begin{cases}
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;
+          \begin{cases}
 \frac{dx_1}{dt}& = & -\frac{1}{2}x_1\\\\
 \frac{dx_2}{dt}& = & \frac{1}{2}x_1-\frac{1}{4}x_2\\\\
 \frac{dx_3}{dt}& = & \frac{1}{4}x_2-\frac{1}{6}x_3
-\end{cases}"/>, \text{ on } [0,4]"/>
+\end{cases}"/>
 
 
 Subject to the initial conditions <img src="https://latex.codecogs.com/svg.latex?\normalsize&space; x_1(0) = 1, x_2(0) = 1, x_3(0) = 1
