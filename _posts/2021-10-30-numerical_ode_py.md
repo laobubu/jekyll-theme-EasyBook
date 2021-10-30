@@ -49,18 +49,16 @@ def euler_explict(a, b, F, c, h):
 \dfrac{dx_1}{dt}& = & -\dfrac{1}{2}x_1\\\\
 \dfrac{dx_2}{dt}& = & \dfrac{1}{2}x_1-\dfrac{1}{4}x_2\\\\
 \dfrac{dx_3}{dt}& = & \dfrac{1}{4}x_2-\dfrac{1}{6}x_3
-\end{cases}, \text{ on } [0,4] "/>
+\end{cases}, \text{ on } [0,4]"/>
 
 
-Subject to the initial conditions <img src="https://latex.codecogs.com/svg.latex?\Large&space; x_1(0) = 1, x_2(0) = 1, x_3(0) = 1
+Subject to the initial conditions <img src="https://latex.codecogs.com/svg.latex?\normalsize&space; x_1(0) = 1, x_2(0) = 1, x_3(0) = 1
 "/>
 
 2. The exact solution of the above system of ODEs is given by
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;
-\begin{cases}
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\begin{cases}
 x_1(t)& = & e^{-t/2}\\
 x_2(t)& = & -2e^{-t/2}+3e^{-t/4}\\
 x_3(t)& = & \dfrac{3}{2}e^{-t/2} - 9e^{-t/4} + \dfrac{17}{2}e^{-t/6}
-\end{cases}
-"/>
+\end{cases}"/>
