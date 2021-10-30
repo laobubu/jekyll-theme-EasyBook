@@ -11,7 +11,7 @@ Here i will show you the implementation of some of the numerical methods to solv
 
 ## 1. Euler Method
 ### Theory: 
-Let <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;t_k"/> be a partition of <img src="https://latex.codecogs.com/svg.latex?\Large&space;[a,b]"/> 
+Let <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;t_k"/> be a partition of <img src="https://latex.codecogs.com/svg.latex?\normalsize;[a,b]"/> 
 such that <img src="https://latex.codecogs.com/svg.latex?\normalsize&space;a=t_0<t_1<\cdots<t_{N-1}<t_{N}=b"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;H"/> 
 be the constant length of the <img src="https://latex.codecogs.com/svg.latex?\Large&space;k"/>-th subinterval <img src="https://latex.codecogs.com/svg.latex?\Large&space;H = t_k - t_{k-1}"/>
 . Let us consider the initial value problem.
