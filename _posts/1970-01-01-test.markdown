@@ -3,7 +3,7 @@ layout: post
 title:  "Mathmatics"
 date:   2021-10-27 16:00
 categories: Programming
-permalink: /archivers/test
+permalink: /archivers/mathmatics
 ---
 ## Numerical Analysis
 
