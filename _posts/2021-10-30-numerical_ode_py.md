@@ -104,7 +104,6 @@ def plot(time, exact, approximate, label, title, abs_er):
     plt.xlabel('time')
     plt.ylabel("error")
 ```
-```python
   
 ```python
 # defining the system of the differential equation
@@ -114,7 +113,7 @@ def model(x, t):
     dx2dt = 0.5*x1 - 0.25*x2
     dx3dt = 0.25*x2 - (1/6)*x3
     return np.array([dx1dt, dx2dt, dx3dt])
- ```
+```
 ```python
 """
 Let us assigne the values of the parametrs and call our function.
