@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+nocomments: true
 ---
  
 * A graduate of Mekelle University-Mekelle Institute of Technology (MU-MIT) located in Mekelle, Ethiopia. I hold a B.Sc. degree with honors in Computer Science and Engineering (CSE). <br>
