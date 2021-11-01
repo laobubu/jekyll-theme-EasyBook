@@ -4,6 +4,7 @@ title:  "Implicit Euler method for Ordinary Differential Equations(ODEs) using P
 date:   2021-1q-01 05:51
 categories: Numerical method for ODEs Python
 permalink: /archivers/Implicit_Euler_method
+---
 
 ## Theory
 In numerical analysis and scientific computing, the backward Euler method (or implicit Euler method) is one of the most basic numerical methods for the solution of ordinary differential equations. 
