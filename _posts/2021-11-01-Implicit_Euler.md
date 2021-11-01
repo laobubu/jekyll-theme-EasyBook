@@ -7,7 +7,7 @@ permalink: /archivers/Implicit_Euler_method
 ---
 
 ## Theory
-In numerical analysis and scientific computing, the backward Euler method (or implicit Euler method) is one of the most basic numerical methods for the solution of ordinary differential equations. 
+In numerical analysis and scientific computing, the __backward Euler method__ (or __implicit Euler method__) is one of the most basic numerical methods for the solution of ordinary differential equations. 
 It is similar to the (standard) Euler method, but differs in that it is an implicit method. The backward Euler method has error of order one in time([Wikipedia](https://en.wikipedia.org/wiki/Backward_Euler_method)).
 
 ## Implementation and Plots
