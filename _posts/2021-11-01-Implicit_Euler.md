@@ -123,4 +123,4 @@ plot(t, x1t(t), eu1_im, 'Euler explict', "Exact VS Implicit Euler for x1", abs(x
 plot(t, x2t(t), eu2_im, 'Euler explict', "Exact VS Implicit Euler for x2", abs(x2t(t) - eu2_im)) # plot for x2
 plot(t, x3t(t), eu3_im, 'Euler explict', "Exact VS Implicit Euler for x3", abs(x3t(t) - eu3_im)) # plot for x3
 ```
-![Implicit Euler](https://github.com/luelhagos/luelhagos.github.io/blob/gh-pages/Figures/numeric_ode/implicit_euler_m.png)
+![Implicit Euler](https://github.com/luelhagos/luelhagos.github.io/blob/gh-pages/Figures/numeric_ode/implicit_euler_m.png?raw=true)
