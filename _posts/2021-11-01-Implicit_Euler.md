@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Implicit Euler method for Ordinary Differential Equations(ODEs) using Python"
-date:   2021-1q-01 05:51
+date:   2021-11-01 05:51
 categories: Numerical method for ODEs Python
 permalink: /archivers/Implicit_Euler_method
 ---
