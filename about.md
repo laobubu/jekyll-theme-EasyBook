@@ -10,7 +10,7 @@ nocomments: true
 * I'm passionate about new technologies, programming, Machine Learning, and Data Science.<br>
 
 ## Education 
-* [__Master's degree in Mathematical Sciences at African Institute for Mathematical Sciences](https://aims.ac.rw/)__ (09/2021 – Ongoing, Rwanda)
+* [__Master's degree in Mathematical Sciences at African Institute for Mathematical Sciences__](https://aims.ac.rw/)__ (09/2021 – Ongoing, Rwanda)
     * Master's in Mathematical Sciences major in Data Science.
  
 * [__Data and Machine Learning Engineering – 10 Academy__](https://www.10academy.org/)( 07/2021 – 10/2021)
