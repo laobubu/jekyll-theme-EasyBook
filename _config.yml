@@ -1,35 +1,39 @@
 # Site settings
-title: Another Blog
-url: "http://laobubu.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
-baseurl: "/jekyll-theme-EasyBook" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
+#title: Another Blog
+title: Luel Hagos
+url: "https://luelhagos.github.io/"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+baseurl: "" # the prefix of your site uri, eg. `"/jekyll-theme-EasyBook"` or empty string `""`
 #timezone: Asia/Chongqing
 description: >
-  One or more sentences introducing this blog.
+Welcome to my personal blog. Enjoy!!
 
 # Your information
-email: your_email@example.com
-author: your_name
-avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
-profile: One sentence introducing yourself.
-#twitter_username: twitter_username
-#github_username:  github_username
+email: luel.hagos@aims.ac.rw
+author: Luel Hagos
+avatar: "https://github.com/luelhagos/Avator/blob/main/luel12.jpg?raw=true"
+profile: Passionate about new technologies and programming. ML and NLP Enthusiastic.
+#twitter_username: Prince01Luel
+#github_username:  Luel-Hagos
 profile_links:
-  Email: "mailto:your_email@example.com"
-  GitHub: "https://github.com/laobubu/jekyll-theme-EasyBook"
+  Email: "luel.hagos@aims.ac.rw"
+  GitHub: "https://github.com/luelhagos"
+  LinkedIn: "https://www.linkedin.com/in/luel-hagos1"
+  #Twitter: "https://twitter.com/Prince01Luel"
+  #CV: "https://drive.google.com/file/d/1IMlH1bLz0z8txNYhLNE89UhA7YRDY1Zn/view?usp=sharing"
   # You can add more profile links above, or edit _includes/sidebar.html 
 
 # Comment Service (Disqus or 多说)
 #  choose one and un-comment the line to active it
-#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
+disqus_shortname: luel   # get one: https://disqus.com/admin/signup/
 #duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
 excerpt_separator: <!--more-->
 
 header:
   links:             # Links on the header. Link to in-site page with a slash as prefix
-    About: /about/
-    Category: /category/
-    Donate: https://laobubu.net/donate.html
+    ABOUT ME: /about/
+    PROJECTS: /Projects/
+    #Donate: https://laobubu.net/donate.html
 
 permalink: /archivers/:title
 plugins:
